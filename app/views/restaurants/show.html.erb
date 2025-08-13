@@ -14,3 +14,12 @@
     </div>
   </div>
 </div>
+<%= link_to "Give a rating", new_restaurant_review_path(@restaurant), class: 'text-light text-decoration-none btn btn-success'%>
+
+
+<div class="card-product-infos">
+  <h2><% @restaurant.reviews.each do |review|  %></h2>
+    <%= review.content %>
+    <p>Ratings <strong><%= review.rating %></strong></p>
+  <% end %>
+</div>

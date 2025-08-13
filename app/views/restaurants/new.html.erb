@@ -5,5 +5,7 @@
   <%= f.input :address%>
   <%= f.input :phone_number%>
   <%= f.select :category, options_for_select(Restaurant::CATEGORY)%>
-  <%= f.submit :submit, class: "btn btn-success w-100"%>
+  <%= f.submit :submit, class: "btn btn-success w-100 mt-4"%>
 <% end %>
+
+ <%= link_to "Go back....<-------", restaurants_path, class: 'text-light text-decoration-none btn btn-success mt-4'%>

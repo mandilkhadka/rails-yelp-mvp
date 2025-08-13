@@ -1,8 +1,11 @@
+<%# <div   "> %>
+ <%= link_to "Add a new Restaurant +", new_restaurant_path, class: 'text-light text-decoration-none btn btn-success'%>
+<%# </div> %>
 <% @restaurants.each do |restaurant| %>
-  <div class=" d-flex ">
+  <%= link_to restaurant_path(restaurant) do%>
     <div class="card-trip">
       <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <div class="card-trip-infos ">
+      <div class="card-trip-infos text-dark ">
         <div>
           <h2><%= restaurant.name %></h2>
           <p>- <%= restaurant.address %></p>
@@ -14,5 +17,5 @@
         <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
       </div>
     </div>
-  </div>
+  <% end %>
 <% end %>
